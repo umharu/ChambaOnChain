@@ -1,13 +1,8 @@
-# Blockchain Drive: Securing Data on the Ethereum & IPFS
+# Chamba on Chain
 
 
-Welcome to Blockchain Drive, a decentralized data storage solution that leverages the power of Ethereum and IPFS to securely store and manage your data.
+Bienvenidos a Chamba on Chain, es un proyecto creado en el marco de practicas profesionalizantes. El mismo fue pensado, creado por chicos de ultimo año de secundaria.
 
-**Project Link:** [http://blockchain-drive.ruhul.info](http://blockchain-drive.ruhul.info/)
-
-**Youtube Link:** [https://www.youtube.com/watch?v=o9oqNeTxKJQ]( https://www.youtube.com/watch?v=o9oqNeTxKJQ)
-
-**GitHub Repository:** [Blockchain Drive GitHub](https://github.com/ruhulamin1398/Blockchain-Drive____Securing-Data-using-the-Ethereum-and-IPFS.git)
 
 
 ## Watch the Project Overview Video
