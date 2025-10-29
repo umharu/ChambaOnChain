@@ -1,8 +1,8 @@
-# Sample Hardhat Project
+# Hardhat
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Este proyecto es un basic example en Hardhat. Smart contract example, un test y un script que hace el deploy del contrato.
 
-Try running some of the following tasks:
+Para correr algunos de los siguientes comandos:
 
 ```shell
 npx hardhat help
