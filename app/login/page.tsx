@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
+import { ConnectWalletButton } from "@/components/wallet/ConnectWalletButton"
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -124,6 +125,24 @@ export default function LoginPage() {
             >
               Iniciar sesión
             </Button>
+
+            <div className="space-y-4 pt-2">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="w-full border-t border-gray-200" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-white px-2 text-[#1e3a5f]/60">O conecta con tu billetera</span>
+                </div>
+              </div>
+
+              <ConnectWalletButton
+                onConnect={(address) => {
+                  console.log("Wallet conectada:", address)
+                  // Aquí puedes agregar la lógica para autenticar con la wallet
+                }}
+              />
+            </div>
 
             <div className="text-center pt-2">
               <p className="text-sm text-[#1e3a5f]/60">
