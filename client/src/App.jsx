@@ -72,8 +72,8 @@ function App() {
  
 
       <div className="App">
-        <p className='text-5xl text-white font-black mt-2 md:mt-[150px]'  >Blockchain Drive (Ethereum,IPFS ) </p>
-     
+        <p className='text-5xl text-white font-black mt-2 md:mt-[150px]'  >Chamba On Chain </p>
+        
 
         <p style={{ color: "white" }}>
           Account : {account ? account : "Not connected"}
@@ -89,7 +89,7 @@ function App() {
 
 
       <div id='files' className=" bg-black  bg-opacity-75  mx-auto max-w-7xl  sm:px-6   lg:px-8  py-5 md:py-10">
-      <Files contract={contract} account={account} title="My Files" />
+      <Files contract={contract} account={account} title="Mis trabajos" />
         </div>
 
 
