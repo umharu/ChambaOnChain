@@ -139,7 +139,8 @@ export default function LoginPage() {
               <ConnectWalletButton
                 onConnect={(address) => {
                   console.log("Wallet conectada:", address)
-                  // Aquí puedes agregar la lógica para autenticar con la wallet
+                  // Redirect to dashboard after wallet connection
+                  window.location.href = "/dashboard"
                 }}
               />
             </div>

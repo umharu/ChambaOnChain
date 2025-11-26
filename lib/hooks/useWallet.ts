@@ -14,13 +14,16 @@ export function useWallet() {
   const [state, setState] = useState<WalletState>({
     address: null,
     isConnected: false,
-    isConnecting: false,
+    isConnecting: true, // Start as connecting to check initial state
     error: null,
   })
 
   // Verificar si ya hay una conexión previa
   useEffect(() => {
     const checkConnection = async () => {
+      // Set connecting state while checking
+      setState(prev => ({ ...prev, isConnecting: true }))
+      
       if (typeof window !== "undefined" && window.ethereum) {
         try {
           const accounts = await window.ethereum.request({
@@ -31,13 +34,35 @@ export function useWallet() {
             setState({
               address,
               isConnected: true,
-              isConnecting: false,
+              isConnecting: false, // Done checking
+              error: null,
+            })
+          } else {
+            // No accounts found, but we're done checking
+            setState({
+              address: null,
+              isConnected: false,
+              isConnecting: false, // Done checking
               error: null,
             })
           }
         } catch (error) {
           console.error("Error checking wallet connection:", error)
+          setState({
+            address: null,
+            isConnected: false,
+            isConnecting: false, // Done checking (with error)
+            error: null,
+          })
         }
+      } else {
+        // No ethereum provider, done checking
+        setState({
+          address: null,
+          isConnected: false,
+          isConnecting: false,
+          error: null,
+        })
       }
     }
 
@@ -84,11 +109,45 @@ export function useWallet() {
     setState((prev) => ({ ...prev, isConnecting: true, error: null }))
 
     try {
+      // Get chain from environment or default to sepolia
+      const chainId = process.env.NEXT_PUBLIC_CHAIN_ID
+      let chain: any = undefined
+      
+      if (chainId === "11155111" || !chainId) {
+        chain = {
+          id: 11155111,
+          name: "Sepolia",
+          nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+          rpcUrls: {
+            default: { http: ["https://rpc.sepolia.org"] },
+          },
+        }
+      } else if (chainId === "31337") {
+        chain = {
+          id: 31337,
+          name: "Localhost",
+          nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+          rpcUrls: {
+            default: { http: ["http://127.0.0.1:8545"] },
+          },
+        }
+      }
+
       const walletClient = createWalletClient({
+        chain: chain,
         transport: custom(window.ethereum),
       })
 
-      const [account] = await walletClient.requestAddresses()
+      const accounts = await walletClient.requestAddresses()
+      if (!accounts || accounts.length === 0) {
+        throw new Error("No se pudieron obtener las cuentas de la wallet")
+      }
+      
+      const account = accounts[0]
+      if (!account) {
+        throw new Error("No se pudo obtener la cuenta de la wallet")
+      }
+      
       const address = getAddress(account)
 
       setState({
