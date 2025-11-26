@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chamba on Chain
 
-## Getting Started
+**Chamba on Chain** es una DApp educativa desarrollada por estudiantes de ultimo año nivel secundario, pensada para acercar a los jóvenes al mundo del trabajo y la tecnología blockchain.
+El proyecto permite que los estudiantes creen su **portfolio descentralizado** subiendo archivos (como proyectos, CV o certificados) a la **blockchain** e **IPFS**, generando así una identidad profesional verificable en  Web3.
+Además, las empresas pueden contactarlos directamente para ofrecerles su **primera experiencia laboral**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Objetivo del proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Brindar a los estudiantes una herramienta práctica para:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Aprender sobre **blockchain**.
+* Crear y almacenar de forma segura sus logros académicos y proyectos.
+* Conectar con **empresas** que buscan jóvenes talentos.
+* Desarrollar su **primer portfolio descentralizado**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tecnologías utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+| Componente     | Descripción                                                                      |
+| -------------- | -------------------------------------------------------------------------------- |
+| **Solidity**   | Desarrollo de los smart contracts que gestionan los archivos y usuarios.         |
+| **Hardhat**    | Framework para compilar, desplegar y testear los contratos en entornos Ethereum. |
+| **IPFS**       | Almacenamiento descentralizado de los archivos del portfolio.                    |
+| **JavaScript** | Lógica del frontend y conexión con los contratos inteligentes.                   |
+| **Ethers.js**  | Comunicación entre el frontend y la blockchain.                                  |
+| **HTML / CSS** | Interfaz web simple y accesible para los estudiantes.                            |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Instalación y ejecución local
 
-## Deploy on Vercel
+1. **Clonar el repositorio**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/umharu/ChambaOnChain.git
+   cd ChambaOnChain
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Instalar dependencias**
+
+   ```bash
+   npm install
+   ```
+
+3. **Compilar los contratos**
+
+   ```bash
+   npx hardhat compile
+   ```
+
+4. **Desplegar en una red de prueba (por ejemplo, Sepolia)**
+
+   ```bash
+   npx hardhat run scripts/deploy.js --network sepolia
+   ```
+
+5. **Iniciar el frontend**
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## Cómo funciona
+
+1. El usuario (estudiante) conecta su **wallet** (Metamask).
+2. Sube un archivo (PDF) que se guarda en **IPFS**.
+3. El **hash del archivo** se registra en la blockchain mediante un **smart contract Solidity**.
+4. Las empresas pueden visualizar los portfolios públicos y contactar a los usuarios directamente.
+
+---
+
+## Próximos pasos
+
+* Mejorar la interfaz con frameworks modernos (React o Next.js).
+* Integrar sistema de reputación o validación.
+* Conectar con plataformas de empleo Web3.
+
+---
+
+## Equipo
+
+Proyecto educativo desarrollado por estudiantes de ultimo año nivel secundario dentro del programa "Practicas profesionalizantes" - ETH-Kipu
+
+---
+
+**“Chamba on Chain ”**
+
