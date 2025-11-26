@@ -60,7 +60,7 @@ Brindar a los estudiantes una herramienta práctica para:
 5. **Iniciar el frontend**
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 ---
@@ -68,7 +68,7 @@ Brindar a los estudiantes una herramienta práctica para:
 ## Cómo funciona
 
 1. El usuario (estudiante) conecta su **wallet** (Metamask).
-2. Sube un archivo (PDF, imagen, CV, etc.) que se guarda en **IPFS**.
+2. Sube un archivo (PDF) que se guarda en **IPFS**.
 3. El **hash del archivo** se registra en la blockchain mediante un **smart contract Solidity**.
 4. Las empresas pueden visualizar los portfolios públicos y contactar a los usuarios directamente.
 
