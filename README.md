@@ -1,92 +1,81 @@
-# Chamba on Chain
+<p align="center">
+  <img src="./public/logo.jepg" alt="Chamba on Chain Logo" width="180">
+</p>
 
-**Chamba on Chain** es una DApp educativa desarrollada por estudiantes de ultimo año nivel secundario, pensada para acercar a los jóvenes al mundo del trabajo y la tecnología blockchain.
-El proyecto permite que los estudiantes creen su **portfolio descentralizado** subiendo archivos (como proyectos, CV o certificados) a la **blockchain** e **IPFS**, generando así una identidad profesional verificable en  Web3.
-Además, las empresas pueden contactarlos directamente para ofrecerles su **primera experiencia laboral**.
+<h1 align="center" style="color:#0B274A;">🚀 Chamba on Chain</h1>
 
----
-
-## Objetivo del proyecto
-
-Brindar a los estudiantes una herramienta práctica para:
-
-* Aprender sobre **blockchain**.
-* Crear y almacenar de forma segura sus logros académicos y proyectos.
-* Conectar con **empresas** que buscan jóvenes talentos.
-* Desarrollar su **primer portfolio descentralizado**.
+<p align="center" style="color:#F26A21;">
+  Una DApp educativa que transforma portfolios escolares en identidades profesionales Web3.
+</p>
 
 ---
 
-## Tecnologías utilizadas
+## 🎯 <span style="color:#0B274A;">Objetivos del Proyecto</span>
 
-| Componente     | Descripción                                                                      |
-| -------------- | -------------------------------------------------------------------------------- |
-| **Solidity**   | Desarrollo de los smart contracts que gestionan los archivos y usuarios.         |
-| **Hardhat**    | Framework para compilar, desplegar y testear los contratos en entornos Ethereum. |
-| **IPFS**       | Almacenamiento descentralizado de los archivos del portfolio.                    |
-| **JavaScript** | Lógica del frontend y conexión con los contratos inteligentes.                   |
-| **Ethers.js**  | Comunicación entre el frontend y la blockchain.                                  |
-| **HTML / CSS** | Interfaz web simple y accesible para los estudiantes.                            |
+- **Adquirir conceptos fundamentales sobre blockchain.**
+- **Identificar una problemática escolar cotidiana** e iniciar el desarrollo de un producto basado en **tecnología Ethereum** para dar solución.
+- **Adquirir experiencia sobre desarrollo y gestión de productos Web3**, a través del proyecto desarrollado durante la práctica.
+- Introducir a los estudiantes en el uso real de tecnología descentralizada.
+- Generar un portfolio profesional verificable en Web3.
+- Facilitar el contacto directo con empresas que buscan talentos jóvenes.
 
 ---
 
-## ⚙️ Instalación y ejecución local
+## 🧰 <span style="color:#0B274A;">Tecnologías Utilizadas</span>
 
-1. **Clonar el repositorio**
+### 🧠 Backend / Smart Contracts
+- Solidity  
+- Hardhat  
+- IPFS  
+- Ethers.js  
 
-   ```bash
-   git clone https://github.com/umharu/ChambaOnChain.git
-   cd ChambaOnChain
-   ```
+### 🎨 Frontend
+- Next.js / React  
+- JavaScript / TypeScript  
+- TailwindCSS  
+- HTML / CSS  
 
-2. **Instalar dependencias**
-
-   ```bash
-   npm install
-   ```
-
-3. **Compilar los contratos**
-
-   ```bash
-   npx hardhat compile
-   ```
-
-4. **Desplegar en una red de prueba (por ejemplo, Sepolia)**
-
-   ```bash
-   npx hardhat run scripts/deploy.js --network sepolia
-   ```
-
-5. **Iniciar el frontend**
-
-   ```bash
-   npm run dev
-   ```
+### 🛠 Herramientas del Proyecto
+- Github  
+- Excalidraw  
+- v0 (Vercel AI UI Generator)  
+- Lucid  
+- Metamask  
+- Whatsapp  
+- Discord  
+- Google Suite  
 
 ---
 
-## Cómo funciona
+## ⚙️ <span style="color:#0B274A;">Instalación y Ejecución Local</span>
 
-1. El usuario (estudiante) conecta su **wallet** (Metamask).
-2. Sube un archivo (PDF) que se guarda en **IPFS**.
-3. El **hash del archivo** se registra en la blockchain mediante un **smart contract Solidity**.
-4. Las empresas pueden visualizar los portfolios públicos y contactar a los usuarios directamente.
+### 1️⃣ Clonar el repositorio
+```bash
+git clone https://github.com/umharu/ChambaOnChain.git
+cd ChambaOnChain
+2️⃣ Instalar dependencias del frontend
+bash
+Copiar código
+npm install
+3️⃣ (Opcional) Instalar dependencias de los smart contracts
+bash
+Copiar código
+cd smart_contract
+npm install
+4️⃣ Compilar contratos Solidity
+bash
+Copiar código
+npx hardhat compile
+5️⃣ Desplegar contratos en Sepolia
+bash
+Copiar código
+npx hardhat run scripts/deploy.js --network sepolia
+6️⃣ Iniciar el frontend
+bash
+Copiar código
+npm run dev
+Acceder a:
 
----
-
-## Próximos pasos
-
-* Mejorar la interfaz con frameworks modernos (React o Next.js).
-* Integrar sistema de reputación o validación.
-* Conectar con plataformas de empleo Web3.
-
----
-
-## Equipo
-
-Proyecto educativo desarrollado por estudiantes de ultimo año nivel secundario dentro del programa "Practicas profesionalizantes" - ETH-Kipu
-
----
-
-**“Chamba on Chain ”**
-
+arduino
+Copiar código
+http://localhost:3000
